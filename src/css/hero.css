@@ -6,10 +6,10 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 30% 50%, rgba(212, 160, 23, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 30%, rgba(192, 57, 43, 0.04) 0%, transparent 50%),
-    var(--bg-primary);
+  background-color: var(--bg-primary);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   padding: 120px 24px 80px;
 }
 
@@ -24,6 +24,12 @@
   position: absolute;
   inset: 0;
   background:
+    linear-gradient(
+      to bottom,
+      rgba(5, 5, 16, 0.55) 0%,
+      rgba(5, 5, 16, 0.45) 40%,
+      rgba(5, 5, 16, 0.65) 100%
+    ),
     repeating-linear-gradient(
       0deg,
       transparent,
