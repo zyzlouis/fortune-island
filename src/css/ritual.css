@@ -1,0 +1,514 @@
+/* ===== 祖庙法事服务 ===== */
+.ritual-section {
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(192, 57, 43, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 80%, rgba(212, 160, 23, 0.04) 0%, transparent 50%),
+    var(--bg-primary);
+}
+
+/* ===== 祖庙介绍 ===== */
+.ritual-intro {
+  margin-bottom: 48px;
+}
+
+.ritual-temple {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.temple-glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212, 160, 23, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.temple-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 20px rgba(212, 160, 23, 0.3));
+}
+
+.temple-name {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  margin-bottom: 8px;
+  text-shadow: 0 0 20px rgba(212, 160, 23, 0.2);
+}
+
+.temple-location {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.temple-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+}
+
+.temple-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.temple-stat {
+  text-align: center;
+}
+
+.temple-stat-value {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.temple-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ===== 法事项目网格 ===== */
+.ritual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+/* ===== 法事卡片 ===== */
+.ritual-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ritual-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 48px rgba(212, 160, 23, 0.12);
+}
+
+.ritual-card-glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.burn-card .ritual-card-glow {
+  background: radial-gradient(circle, rgba(231, 76, 60, 0.06) 0%, transparent 70%);
+}
+
+.treasury-card .ritual-card-glow {
+  background: radial-gradient(circle, rgba(212, 160, 23, 0.06) 0%, transparent 70%);
+}
+
+/* 卡片头部 */
+.ritual-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ritual-icon-wrap {
+  position: relative;
+}
+
+.ritual-icon {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 12px rgba(212, 160, 23, 0.3));
+}
+
+.ritual-icon-ring {
+  position: absolute;
+  inset: -8px;
+  border: 2px solid rgba(212, 160, 23, 0.15);
+  border-radius: 50%;
+  animation: spin-slow 15s linear infinite;
+}
+
+.ritual-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(231, 76, 60, 0.12);
+  color: var(--red-light);
+  border: 1px solid rgba(231, 76, 60, 0.25);
+}
+
+.treasury-badge {
+  background: rgba(212, 160, 23, 0.1);
+  color: var(--gold);
+  border: 1px solid rgba(212, 160, 23, 0.25);
+}
+
+/* 标题 */
+.ritual-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.ritual-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.ritual-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* 法事特色 */
+.ritual-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.ritual-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid rgba(212, 160, 23, 0.2);
+  transition: all 0.3s;
+}
+
+.ritual-feature:hover {
+  border-left-color: var(--gold);
+  background: rgba(212, 160, 23, 0.04);
+}
+
+.feature-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ===== 套餐选择 ===== */
+.ritual-packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ritual-pkg {
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ritual-pkg:hover {
+  border-color: var(--border-hover);
+  background: rgba(212, 160, 23, 0.04);
+}
+
+.ritual-pkg.selected {
+  border-color: var(--gold);
+  background: rgba(212, 160, 23, 0.08);
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.1);
+}
+
+.pkg-popular {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  background: var(--gradient-gold);
+  color: #1a0f00;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.pkg-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pkg-detail {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.pkg-price {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+/* 备注 */
+.ritual-note {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+.ritual-note strong {
+  color: var(--gold);
+}
+
+/* ===== 法事流程 ===== */
+.ritual-process {
+  margin-bottom: 60px;
+}
+
+.process-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.process-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+
+.process-step {
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 18px;
+  transition: all 0.3s;
+}
+
+.process-step:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.step-number {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: var(--gradient-gold);
+  color: #1a0f00;
+  font-size: 0.72rem;
+  font-weight: 900;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.process-step h4 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.process-step p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.process-arrow {
+  font-size: 1.2rem;
+  color: var(--gold-dark);
+  margin-top: 50px;
+  flex-shrink: 0;
+}
+
+/* ===== 信众见证 ===== */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.testimonial-avatar {
+  font-size: 2rem;
+}
+
+.testimonial-name {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: monospace;
+}
+
+.testimonial-service {
+  font-size: 0.72rem;
+  color: var(--gold);
+}
+
+.testimonial-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.testimonial-stars {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 1024px) {
+  .ritual-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ritual-temple {
+    padding: 32px 24px;
+  }
+
+  .temple-name {
+    font-size: 1.4rem;
+  }
+
+  .temple-stats {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .ritual-card {
+    padding: 28px 22px;
+  }
+
+  .ritual-packages {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ritual-pkg {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+  }
+
+  .pkg-popular {
+    position: static;
+    transform: none;
+    order: -1;
+  }
+
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .process-step {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+    margin: 0;
+  }
+}

@@ -1,0 +1,164 @@
+/* ===== 市场行情 ===== */
+.market-section {
+  background: var(--bg-primary);
+}
+
+.market-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.market-table thead {
+  background: rgba(212, 160, 23, 0.06);
+}
+
+.market-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.market-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(212, 160, 23, 0.04);
+  white-space: nowrap;
+}
+
+.market-table tbody tr {
+  transition: background 0.3s;
+}
+
+.market-table tbody tr:hover {
+  background: rgba(212, 160, 23, 0.04);
+}
+
+.market-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.coin-name {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coin-name small {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+td.up {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+td.down {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* 财运标签 */
+.fortune-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+}
+
+.fortune-badge.great {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.2), rgba(240, 208, 96, 0.2));
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+.fortune-badge.good {
+  background: rgba(39, 174, 96, 0.15);
+  color: #2ecc71;
+  border: 1px solid rgba(39, 174, 96, 0.25);
+}
+
+.fortune-badge.mid {
+  background: rgba(230, 126, 34, 0.12);
+  color: #e67e22;
+  border: 1px solid rgba(230, 126, 34, 0.2);
+}
+
+/* ===== 合作伙伴 ===== */
+.partners-section {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.partner-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 36px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.3s;
+}
+
+.partner-item:hover {
+  border-color: var(--border-hover);
+  color: var(--gold);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+/* ===== CTA 区域 ===== */
+.cta-section {
+  padding: 100px 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(212, 160, 23, 0.06) 0%, transparent 60%),
+    var(--bg-primary);
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}

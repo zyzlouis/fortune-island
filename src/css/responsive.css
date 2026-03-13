@@ -1,0 +1,263 @@
+/* ===== 响应式设计 ===== */
+
+/* 平板 (<=1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .staking-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .gamefi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nft-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tokenomics-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .token-chart {
+    order: -1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .hero-figure {
+    display: none;
+  }
+}
+
+/* 手机 (<=768px) */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+
+  /* 导航 */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 6, 5, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    gap: 4px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  #connectWallet {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .lang-toggle {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  /* 英雄区 */
+  .hero {
+    padding: 100px 20px 60px;
+    min-height: auto;
+  }
+
+  .title-line {
+    font-size: 2.2rem;
+  }
+
+  .title-line.gold {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .stat-value {
+    font-size: 1.3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* 通用 */
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* 神谕 */
+  .oracle-card {
+    padding: 32px 24px;
+  }
+
+  .oracle-text {
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+  }
+
+  .oracle-fortune {
+    gap: 20px;
+  }
+
+  .oracle-decoration-left,
+  .oracle-decoration-right {
+    font-size: 5rem;
+  }
+
+  /* NFT */
+  .nft-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .nft-image {
+    height: 140px;
+  }
+
+  .nft-emoji {
+    font-size: 3.5rem;
+  }
+
+  /* 行情表 */
+  .market-table th,
+  .market-table td {
+    padding: 12px 14px;
+    font-size: 0.82rem;
+  }
+
+  /* CTA */
+  .cta-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+  }
+
+  /* 页脚 */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* 小手机 (<=480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .title-line {
+    font-size: 1.8rem;
+  }
+
+  .title-line.gold {
+    font-size: 2.4rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .staking-card {
+    padding: 24px 20px;
+  }
+
+  .nft-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .nft-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prediction-buttons {
+    flex-direction: column;
+  }
+
+  .chart-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .chart-legend {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-item {
+    width: 100%;
+    text-align: center;
+  }
+}

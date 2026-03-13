@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>财富岛 Fortune Island — 元宇宙财神文化平台</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ===== 顶部导航 ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🏮</span>
+        <span class="logo-text" data-i18n="nav.logo">财富岛</span>
+        <span class="logo-sub">Fortune Island</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#oracle" data-i18n="nav.oracle">财神指引</a></li>
+        <li><a href="#ritual" data-i18n="nav.ritual">云端祖庙</a></li>
+        <li><a href="#bazi" data-i18n="nav.bazi">命运罗盘</a></li>
+        <li><a href="#welfare" data-i18n="nav.welfare">🎁 福禄广场</a></li>
+        <li><a href="#staking" data-i18n="nav.staking">财富神殿</a></li>
+        <li><a href="#gamefi" data-i18n="nav.gamefi">黑虎竞技场</a></li>
+        <li><a href="#nft" data-i18n="nav.nft">法器锻造坊</a></li>
+        <li><a href="#tokenomics" data-i18n="nav.token">$MONEYGOD</a></li>
+        <li><a href="#market" data-i18n="nav.market">行情</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" title="切换语言 / Switch Language">
+          <span class="lang-zh active">中</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="btn btn-gold" id="connectWallet">
+          <span class="btn-icon">⛓️</span> <span data-i18n="nav.connect">连接钱包</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== 英雄区 ===== -->
+  <section class="hero" id="hero" style="background-image: url('hero-banner-v2.png');">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero.badge">⚡ BNB Chain 首个元宇宙财神文化平台</div>
+      <h1 class="hero-title">
+        <span class="title-line" data-i18n="hero.title1">财富岛</span>
+        <span class="title-line gold" data-i18n="hero.title2">Fortune Island</span>
+      </h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        以正财神赵公明为守护神，融合元宇宙 · DeFi · GameFi · NFT，开启千年财神文化的 Web3 新纪元
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value" id="tvlValue">$12,888,888</span>
+          <span class="stat-label" data-i18n="hero.tvl">岛内锁仓量 (TVL)</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" id="usersValue">28,888</span>
+          <span class="stat-label" data-i18n="hero.users">岛民数量</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" id="nftValue">8,888</span>
+          <span class="stat-label" data-i18n="hero.nfts">法器 NFT</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#staking" class="btn btn-primary btn-lg" data-i18n="hero.cta1">
+          🔥 财富神殿
+        </a>
+        <a href="#nft" class="btn btn-outline btn-lg" data-i18n="hero.cta2">
+          ⚔️ 探索宝库
+        </a>
+      </div>
+    </div>
+    <!-- 财神形象 -->
+    <div class="hero-figure">
+      <div class="god-aura"></div>
+      <div class="god-figure">
+        <div class="god-halo"></div>
+        <div class="god-body">
+          <div class="god-face">
+            <div class="god-hat">👑</div>
+            <div class="god-head">🧔</div>
+          </div>
+          <div class="god-robe">
+            <span class="robe-symbol">財</span>
+          </div>
+          <div class="god-weapon-left">🔱</div>
+          <div class="god-weapon-right">💰</div>
+        </div>
+        <div class="god-tiger">🐅</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span data-i18n="hero.scroll">向下探索</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== 财神神谕 ===== -->
+  <section class="section oracle-section" id="oracle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Daily Oracle</span>
+        <h2 class="section-title" data-i18n="oracle.title">📜 赵公明 · 财神指引</h2>
+        <p class="section-desc" data-i18n="oracle.desc">赵公明每日为您开示财运玄机，指引投资方向</p>
+      </div>
+      <div class="oracle-card">
+        <div class="oracle-decoration-left">福</div>
+        <div class="oracle-decoration-right">禄</div>
+        <div class="oracle-inner">
+          <div class="oracle-seal" data-i18n="oracle.seal">赵公明印</div>
+          <div class="oracle-date" id="oracleDate"></div>
+          <div class="oracle-divider-top"></div>
+          <p class="oracle-text" id="oracleText">
+            风起云涌见真金，静水深流蕴大财。<br />
+            虎啸山林惊四海，岛上修行自然来。
+          </p>
+          <div class="oracle-divider-bottom"></div>
+          <div class="oracle-fortune">
+            <div class="fortune-item">
+              <span class="fortune-label" data-i18n="oracle.fortune">财运</span>
+              <div class="fortune-stars" id="fortuneStars">★★★★☆</div>
+            </div>
+            <div class="fortune-item">
+              <span class="fortune-label" data-i18n="oracle.luckyHourLabel">吉时</span>
+              <span class="fortune-value" id="luckyHour">巳时 (9:00-11:00)</span>
+            </div>
+            <div class="fortune-item">
+              <span class="fortune-label" data-i18n="oracle.luckyColor">吉色</span>
+              <span class="fortune-value fortune-color-gold" data-i18n="oracle.gold">金色</span>
+            </div>
+          </div>
+          <button class="btn btn-gold oracle-btn" id="drawOracleBtn" data-i18n="oracle.draw">
+            🎴 每日求签
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 赵公明祖庙法事服务 ===== -->
+  <section class="section ritual-section" id="ritual">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Temple Rituals</span>
+        <h2 class="section-title" data-i18n="ritual.title">🏛️ 赵公明财神祖庙</h2>
+        <p class="section-desc" data-i18n="ritual.desc">源自赵公明祖庙千年传承，链上法事诚心祈愿，财运亨通</p>
+      </div>
+
+      <!-- 祖庙介绍 -->
+      <div class="ritual-intro">
+        <div class="ritual-temple">
+          <div class="temple-glow"></div>
+          <div class="temple-icon">🏛️</div>
+          <h3 class="temple-name">赵公明财神祖庙</h3>
+          <p class="temple-location">📍 陕西省西安市周至县集贤镇赵大村</p>
+          <p class="temple-desc">天下财神第一庙，正财神赵公明故里。千年香火不绝，灵验无比。财富岛以祖庙为原型，在元宇宙中 1:1 复刻千年神殿，让全球信众足不出户即可虔诚参拜，获得财神庇佑。</p>
+          <div class="temple-stats">
+            <div class="temple-stat">
+              <span class="temple-stat-value">3,000+</span>
+              <span class="temple-stat-label">年历史</span>
+            </div>
+            <div class="temple-stat">
+              <span class="temple-stat-value">100万+</span>
+              <span class="temple-stat-label">年朝拜人次</span>
+            </div>
+            <div class="temple-stat">
+              <span class="temple-stat-value">99.8%</span>
+              <span class="temple-stat-label">好评率</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 法事项目 -->
+      <div class="ritual-grid">
+        <!-- 烧元宝 -->
+        <div class="ritual-card burn-card">
+          <div class="ritual-card-glow"></div>
+          <div class="ritual-card-header">
+            <div class="ritual-icon-wrap">
+              <span class="ritual-icon">🪙</span>
+              <div class="ritual-icon-ring"></div>
+            </div>
+            <div class="ritual-badge">🔥 热门法事</div>
+          </div>
+          <h3 class="ritual-title">烧元宝</h3>
+          <p class="ritual-subtitle">焚化金银元宝 · 上达财神案前</p>
+          <p class="ritual-desc">由祖庙法师在赵公明神像前举行焚化元宝仪式，将您的诚心通过金银元宝传达至财神案前。全程 VR 直播，链上永久存证。</p>
+          
+          <div class="ritual-features">
+            <div class="ritual-feature">
+              <span class="feature-icon">📜</span>
+              <span>填写链上疏文，注明姓名与心愿</span>
+            </div>
+            <div class="ritual-feature">
+              <span class="feature-icon">🔥</span>
+              <span>祖庙法师现场焚化金银元宝</span>
+            </div>
+            <div class="ritual-feature">
+              <span class="feature-icon">📸</span>
+              <span>VR 全景直播，链上永久存证</span>
+            </div>
+            <div class="ritual-feature">
+              <span class="feature-icon">🎁</span>
+              <span>获赠"财神赐福" NFT 凭证</span>
+            </div>
+          </div>
+
+          <div class="ritual-packages">
+            <div class="ritual-pkg" data-tier="basic">
+              <span class="pkg-name">祈福包</span>
+              <span class="pkg-detail">金元宝 x108</span>
+              <span class="pkg-price">88 USDT</span>
+            </div>
+            <div class="ritual-pkg selected" data-tier="standard">
+              <div class="pkg-popular">最受欢迎</div>
+              <span class="pkg-name">旺财包</span>
+              <span class="pkg-detail">金银元宝 x365</span>
+              <span class="pkg-price">288 USDT</span>
+            </div>
+            <div class="ritual-pkg" data-tier="premium">
+              <span class="pkg-name">鸿运包</span>
+              <span class="pkg-detail">金银元宝 x888 + 大疏文</span>
+              <span class="pkg-price">888 USDT</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-full ritual-btn" onclick="alert('请先连接钱包')">
+            🔥 立即烧元宝
+          </button>
+          <p class="ritual-note">已有 <strong>12,888</strong> 位岛民参与 · 每日法事直播 09:00 / 15:00</p>
+        </div>
+
+        <!-- 补财库 -->
+        <div class="ritual-card treasury-card">
+          <div class="ritual-card-glow"></div>
+          <div class="ritual-card-header">
+            <div class="ritual-icon-wrap">
+              <span class="ritual-icon">🏦</span>
+              <div class="ritual-icon-ring"></div>
+            </div>
+            <div class="ritual-badge treasury-badge">⭐ 镇庙之宝</div>
+          </div>
+          <h3 class="ritual-title">补财库</h3>
+          <p class="ritual-subtitle">填补天库亏空 · 广开财源之路</p>
+          <p class="ritual-desc">每人天生自带一座天财库，因前世今生消耗而亏空。由祖庙住持亲自主持补财库法事，填补天库亏空，让财运重新充盈。</p>
+          
+          <div class="ritual-features">
+            <div class="ritual-feature">
+              <span class="feature-icon">🧮</span>
+              <span>测算天库亏空额度</span>
+            </div>
+            <div class="ritual-feature">
+              <span class="feature-icon">📿</span>
+              <span>住持领衔诵经祈福</span>
+            </div>
+            <div class="ritual-feature">
+              <span class="feature-icon">🔥</span>
+              <span>焚化补库专用疏文与元宝</span>
+            </div>
+            <div class="ritual-feature">
+              <span class="feature-icon">🛡️</span>
+              <span>赠送开光"聚财符" NFT</span>
+            </div>
+          </div>
+
+          <div class="ritual-packages">
+            <div class="ritual-pkg" data-tier="basic">
+              <span class="pkg-name">小补财库</span>
+              <span class="pkg-detail">基础补库法事</span>
+              <span class="pkg-price">168 USDT</span>
+            </div>
+            <div class="ritual-pkg selected" data-tier="standard">
+              <div class="pkg-popular">最受欢迎</div>
+              <span class="pkg-name">中补财库</span>
+              <span class="pkg-detail">标准补库 + 招财法事</span>
+              <span class="pkg-price">588 USDT</span>
+            </div>
+            <div class="ritual-pkg" data-tier="premium">
+              <span class="pkg-name">大补财库</span>
+              <span class="pkg-detail">住持亲做 + 全套法事</span>
+              <span class="pkg-price">1,888 USDT</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-full ritual-btn" onclick="alert('请先连接钱包')">
+            🏦 立即补财库
+          </button>
+          <p class="ritual-note">已有 <strong>8,666</strong> 位岛民参与 · 住持每月初一十五亲做</p>
+        </div>
+      </div>
+
+      <!-- 法事流程 -->
+      <div class="ritual-process">
+        <h3 class="process-title">📋 法事流程</h3>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-icon">⛓️</div>
+            <h4>连接钱包</h4>
+            <p>连接您的 Web3 钱包<br/>选择法事项目与套餐</p>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-icon">📝</div>
+            <h4>链上疏文</h4>
+            <p>填写姓名、生辰及祈愿<br/>生成链上不可篡改疏文</p>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-icon">🔥</div>
+            <h4>祖庙做法</h4>
+            <p>法师于赵公明神像前<br/>举行法事，VR 全景直播</p>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-icon">🎁</div>
+            <h4>链上存证</h4>
+            <p>法事视频上链存证<br/>获赠专属祈福 NFT</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 信众见证 -->
+      <div class="ritual-testimonials">
+        <h3 class="process-title">🙏 信众见证</h3>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar">🧑‍💼</span>
+              <div>
+                <span class="testimonial-name">0x8a3f...d21e</span>
+                <span class="testimonial-service">烧元宝 · 旺财包</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"在财富岛上做完补财库法事的第二天，居然中了 NFT 白名单。链上存证透明可信，这个平台真的不一样！"</p>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar">👩‍💻</span>
+              <div>
+                <span class="testimonial-name">0x2b7c...f9a3</span>
+                <span class="testimonial-service">补财库 · 中补财库</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"VR 直播看到法师在祖庙做法事，身临其境的感觉太震撼了。作为一个常年在海外的华人，终于能在线参拜了。"</p>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar">👨‍🏫</span>
+              <div>
+                <span class="testimonial-name">0xf1e5...b84c</span>
+                <span class="testimonial-service">烧元宝 · 鸿运包</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"补完财库后整个人状态都不一样了，投资决策也更清晰。法器 NFT 还有链上 Buff 加成，设计得太用心了。"</p>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 个人八字命理服务 ===== -->
+  <section class="section bazi-section" id="bazi">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">BaZi Destiny</span>
+        <h2 class="section-title" data-i18n="bazi.title">🔮 命运罗盘</h2>
+        <p class="section-desc" data-i18n="bazi.desc">八字由年柱、月柱、日柱、时柱组成，蕴含您一生的财运密码。财富岛结合千年命理学与 AI 智能分析，精准解读您的链上财运</p>
+      </div>
+
+      <!-- 八字输入区 -->
+      <div class="bazi-hero-card">
+        <div class="bazi-hero-glow"></div>
+        <div class="bazi-hero-left">
+          <h3 class="bazi-hero-title">输入您的出生信息</h3>
+          <p class="bazi-hero-desc">八字由年柱、月柱、日柱、时柱组成，蕴含您一生的财运密码。财富岛结合千年命理学与 AI 智能分析，精准解读您的链上财运。</p>
+          <form class="bazi-form" id="baziForm" onsubmit="return false;">
+            <div class="bazi-form-row">
+              <div class="bazi-field">
+                <label>出生日期</label>
+                <input type="date" id="baziDate" class="bazi-input" value="1990-01-01" />
+              </div>
+              <div class="bazi-field">
+                <label>出生时辰</label>
+                <select id="baziHour" class="bazi-input">
+                  <option value="0">子时 (23:00-01:00)</option>
+                  <option value="1">丑时 (01:00-03:00)</option>
+                  <option value="2">寅时 (03:00-05:00)</option>
+                  <option value="3">卯时 (05:00-07:00)</option>
+                  <option value="4">辰时 (07:00-09:00)</option>
+                  <option value="5">巳时 (09:00-11:00)</option>
+                  <option value="6" selected>午时 (11:00-13:00)</option>
+                  <option value="7">未时 (13:00-15:00)</option>
+                  <option value="8">申时 (15:00-17:00)</option>
+                  <option value="9">酉时 (17:00-19:00)</option>
+                  <option value="10">戌时 (19:00-21:00)</option>
+                  <option value="11">亥时 (21:00-23:00)</option>
+                </select>
+              </div>
+              <div class="bazi-field">
+                <label>性别</label>
+                <select id="baziGender" class="bazi-input">
+                  <option value="male">男 (乾造)</option>
+                  <option value="female">女 (坤造)</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg bazi-submit-btn" id="baziSubmitBtn">
+              🔮 排盘解命
+            </button>
+          </form>
+        </div>
+        <div class="bazi-hero-right">
+          <!-- 八字四柱展示 -->
+          <div class="bazi-pillars" id="baziPillars">
+            <div class="bazi-pillar">
+              <span class="pillar-label">年柱</span>
+              <span class="pillar-stem" id="pillarYearStem">丙</span>
+              <span class="pillar-branch" id="pillarYearBranch">寅</span>
+              <span class="pillar-element fire">🔥 火</span>
+            </div>
+            <div class="bazi-pillar">
+              <span class="pillar-label">月柱</span>
+              <span class="pillar-stem" id="pillarMonthStem">己</span>
+              <span class="pillar-branch" id="pillarMonthBranch">丑</span>
+              <span class="pillar-element earth">🌍 土</span>
+            </div>
+            <div class="bazi-pillar">
+              <span class="pillar-label">日柱</span>
+              <span class="pillar-stem" id="pillarDayStem">壬</span>
+              <span class="pillar-branch" id="pillarDayBranch">午</span>
+              <span class="pillar-element water">💧 水</span>
+            </div>
+            <div class="bazi-pillar">
+              <span class="pillar-label">时柱</span>
+              <span class="pillar-stem" id="pillarHourStem">丙</span>
+              <span class="pillar-branch" id="pillarHourBranch">午</span>
+              <span class="pillar-element fire">🔥 火</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 八字分析结果 -->
+      <div class="bazi-result" id="baziResult">
+        <div class="bazi-result-grid">
+          <!-- 财运总评 -->
+          <div class="bazi-card bazi-fortune-card">
+            <div class="bazi-card-icon">💰</div>
+            <h4>财运总评</h4>
+            <div class="bazi-score">
+              <div class="score-ring">
+                <svg viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(212,160,23,0.1)" stroke-width="8" />
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#goldGrad)" stroke-width="8"
+                    stroke-dasharray="211 264" stroke-linecap="round" transform="rotate(-90,50,50)" id="fortuneRing" />
+                  <defs><linearGradient id="goldGrad"><stop offset="0%" stop-color="#d4a017"/><stop offset="100%" stop-color="#f0d060"/></linearGradient></defs>
+                </svg>
+                <span class="score-value" id="fortuneScore">80</span>
+              </div>
+              <span class="score-label">财运指数</span>
+            </div>
+            <p class="bazi-card-text" id="fortuneSummary">日主壬水，财星为火，八字中火旺有力，先天财运格局优良。正财稳健，偏财亦有机缘。</p>
+          </div>
+
+          <!-- 五行分析 -->
+          <div class="bazi-card bazi-wuxing-card">
+            <div class="bazi-card-icon">☯️</div>
+            <h4>五行分析</h4>
+            <div class="wuxing-bars">
+              <div class="wuxing-bar">
+                <span class="wuxing-name">🌲 木</span>
+                <div class="wuxing-track"><div class="wuxing-fill wood" style="width:25%"></div></div>
+                <span class="wuxing-pct">25%</span>
+              </div>
+              <div class="wuxing-bar">
+                <span class="wuxing-name">🔥 火</span>
+                <div class="wuxing-track"><div class="wuxing-fill fire" style="width:35%"></div></div>
+                <span class="wuxing-pct">35%</span>
+              </div>
+              <div class="wuxing-bar">
+                <span class="wuxing-name">🌍 土</span>
+                <div class="wuxing-track"><div class="wuxing-fill earth" style="width:15%"></div></div>
+                <span class="wuxing-pct">15%</span>
+              </div>
+              <div class="wuxing-bar">
+                <span class="wuxing-name">🪙 金</span>
+                <div class="wuxing-track"><div class="wuxing-fill metal" style="width:10%"></div></div>
+                <span class="wuxing-pct">10%</span>
+              </div>
+              <div class="wuxing-bar">
+                <span class="wuxing-name">💧 水</span>
+                <div class="wuxing-track"><div class="wuxing-fill water" style="width:15%"></div></div>
+                <span class="wuxing-pct">15%</span>
+              </div>
+            </div>
+            <p class="bazi-card-text">五行火旺水弱，喜用神为金、水。建议佩戴金属饰品或白色系物品助运。</p>
+          </div>
+
+          <!-- 流年运势 -->
+          <div class="bazi-card bazi-yearly-card">
+            <div class="bazi-card-icon">📅</div>
+            <h4>2026 流年运势</h4>
+            <div class="yearly-items">
+              <div class="yearly-item">
+                <span class="yearly-aspect">正财运</span>
+                <div class="yearly-stars">★★★★☆</div>
+                <span class="yearly-hint">薪资稳步增长</span>
+              </div>
+              <div class="yearly-item">
+                <span class="yearly-aspect">偏财运</span>
+                <div class="yearly-stars">★★★★★</div>
+                <span class="yearly-hint">投资回报亮眼</span>
+              </div>
+              <div class="yearly-item">
+                <span class="yearly-aspect">事业运</span>
+                <div class="yearly-stars">★★★★☆</div>
+                <span class="yearly-hint">贵人扶持有力</span>
+              </div>
+              <div class="yearly-item">
+                <span class="yearly-aspect">健康运</span>
+                <div class="yearly-stars">★★★☆☆</div>
+                <span class="yearly-hint">注意休息调养</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 财神开运建议 -->
+          <div class="bazi-card bazi-advice-card">
+            <div class="bazi-card-icon">🏮</div>
+            <h4>财神开运建议</h4>
+            <div class="advice-list">
+              <div class="advice-item">
+                <span class="advice-icon">🧭</span>
+                <div>
+                  <strong>财位方位</strong>
+                  <p>正南方为您的流年财位，建议在此方位摆放财神像或聚宝盆</p>
+                </div>
+              </div>
+              <div class="advice-item">
+                <span class="advice-icon">🎨</span>
+                <div>
+                  <strong>开运颜色</strong>
+                  <p>白色、金色、银色为喜用之色，日常穿着可多用</p>
+                </div>
+              </div>
+              <div class="advice-item">
+                <span class="advice-icon">🔢</span>
+                <div>
+                  <strong>幸运数字</strong>
+                  <p>4、9 为大吉之数，可用于钱包地址末位或交易金额</p>
+                </div>
+              </div>
+              <div class="advice-item">
+                <span class="advice-icon">📿</span>
+                <div>
+                  <strong>推荐法事</strong>
+                  <p>您五行缺金，建议参与<a href="#ritual">补财库</a>法事，填补天库亏空</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 八字服务套餐 -->
+      <div class="bazi-services">
+        <h3 class="process-title">📋 八字命理服务</h3>
+        <div class="bazi-service-grid">
+          <div class="bazi-service-card">
+            <div class="bazi-service-icon">🆓</div>
+            <h4>基础排盘</h4>
+            <p class="bazi-service-price free">免费</p>
+            <ul class="bazi-service-list">
+              <li>✅ 八字四柱排盘</li>
+              <li>✅ 五行比例 + 财运总评</li>
+              <li>❌ 详细财运解读</li>
+              <li>❌ 流年大运分析</li>
+              <li>❌ 专属开运建议</li>
+            </ul>
+            <button class="btn btn-outline btn-full" id="baziFreeBtn">🔮 免费排盘</button>
+          </div>
+          <div class="bazi-service-card featured">
+            <div class="bazi-service-badge">最受欢迎</div>
+            <div class="bazi-service-icon">⭐</div>
+            <h4>财运详批</h4>
+            <p class="bazi-service-price">88 USDT</p>
+            <ul class="bazi-service-list">
+              <li>✅ 八字四柱排盘</li>
+              <li>✅ 五行比例 + 财运总评</li>
+              <li>✅ 详细财运解读</li>
+              <li>✅ 流年大运分析</li>
+              <li>✅ 专属开运建议</li>
+            </ul>
+            <button class="btn btn-primary btn-full" onclick="alert('请先连接钱包')">💰 立即购买</button>
+          </div>
+          <div class="bazi-service-card">
+            <div class="bazi-service-icon">👑</div>
+            <h4>大师亲批</h4>
+            <p class="bazi-service-price">388 USDT</p>
+            <ul class="bazi-service-list">
+              <li>✅ 全部财运详批内容</li>
+              <li>✅ 祖庙大师一对一解读</li>
+              <li>✅ 十年大运详细分析</li>
+              <li>✅ 个性化投资策略建议</li>
+              <li>✅ 赠送开光护身 NFT</li>
+              <li>✅ 终身运势跟踪更新</li>
+            </ul>
+            <button class="btn btn-gold btn-full" onclick="alert('请先连接钱包')">👑 预约大师</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 福利中心 ===== -->
+  <section class="section welfare-section" id="welfare">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Rewards Center</span>
+        <h2 class="section-title" data-i18n="welfare.title">🎁 福禄广场</h2>
+        <p class="section-desc" data-i18n="welfare.desc">每日签到领福利，小游戏赢 MONEYGOD，财神爷天天送好运</p>
+      </div>
+
+      <!-- Tab 导航 -->
+      <div class="welfare-tabs">
+        <button class="welfare-tab active" data-panel="panelCheckin">🔥 晨钟暮鼓</button>
+        <button class="welfare-tab" data-panel="panelShake">🎰 摇签筒</button>
+        <button class="welfare-tab" data-panel="panelRain">🧧 红包雨</button>
+        <button class="welfare-tab" data-panel="panelSpin">🎡 聚宝盆转盘</button>
+      </div>
+
+      <!-- ==================== 签到 ==================== -->
+      <div class="welfare-panel active" id="panelCheckin">
+        <div class="checkin-layout">
+          <div class="checkin-main">
+            <div class="checkin-header">
+              <h3>📅 本月签到</h3>
+              <div class="checkin-streak">🔥 连续 <span id="checkinStreak">0</span> 天</div>
+            </div>
+            <div class="checkin-calendar" id="checkinCalendar"></div>
+            <button class="btn btn-primary btn-lg checkin-btn" id="checkinBtn">🔥 立即签到</button>
+          </div>
+          <div class="checkin-sidebar">
+            <div class="checkin-stat-card">
+              <h4>📊 签到统计</h4>
+              <div class="checkin-stat-value" id="checkinTotal">0</div>
+              <div class="checkin-stat-label">累计签到 (天)</div>
+              <div style="margin-top:1rem;">
+                <div class="checkin-stat-value" id="checkinPoints">0</div>
+                <div class="checkin-stat-label">累计积分</div>
+              </div>
+              <div style="margin-top:1rem;">
+                <div class="checkin-stat-value" id="checkinRate">0%</div>
+                <div class="checkin-stat-label">本月签到率</div>
+              </div>
+            </div>
+            <div class="checkin-milestones">
+              <h4>🏆 连签里程碑</h4>
+              <div id="checkinMilestones"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== 摇签筒 ==================== -->
+      <div class="welfare-panel" id="panelShake">
+        <div class="shake-layout">
+          <div class="shake-scene">
+            <div class="shake-tube" id="shakeTube">
+              <div class="shake-sticks">
+                <div class="shake-stick" style="transform:rotate(-12deg)"></div>
+                <div class="shake-stick" style="transform:rotate(-6deg)"></div>
+                <div class="shake-stick" style="transform:rotate(0deg)"></div>
+                <div class="shake-stick" style="transform:rotate(6deg)"></div>
+                <div class="shake-stick" style="transform:rotate(12deg)"></div>
+              </div>
+            </div>
+            <p class="shake-hint">👆 点击签筒摇签</p>
+            <span class="shake-free-count" id="shakeFreeCount">今日免费次数: 1/1</span>
+          </div>
+          <div class="shake-result-area">
+            <div class="shake-result-empty" id="shakeResultEmpty">
+              <div class="empty-icon">🎋</div>
+              <p>摇动签筒，获取财神指引</p>
+              <p style="font-size:0.8rem; margin-top:0.5rem;">每日免费 1 次 · 额外消耗 5 MONEYGOD</p>
+            </div>
+            <div class="shake-result-card" id="shakeResultCard">
+              <div class="result-grade grade-ss">上上签</div>
+              <div class="result-poem">签文将在这里显示</div>
+              <div class="result-reward">+188 MONEYGOD</div>
+              <div class="result-reward-label">已存入您的账户</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== 红包雨 ==================== -->
+      <div class="welfare-panel" id="panelRain">
+        <div class="rain-layout">
+          <div class="rain-info">
+            <div class="rain-info-item"><span>🧧</span> 红包 +5</div>
+            <div class="rain-info-item"><span>🪙</span> 元宝 +15</div>
+            <div class="rain-info-item"><span>👑</span> 财神令 +50</div>
+            <div class="rain-info-item"><span>💣</span> 炸弹 -20</div>
+          </div>
+          <div class="rain-arena">
+            <div class="rain-hud">
+              <div class="rain-hud-item">得分: <span id="rainScore">0</span></div>
+              <div class="rain-hud-item">时间: <span id="rainTimer">15</span>s</div>
+            </div>
+            <canvas class="rain-canvas" id="rainCanvas"></canvas>
+            <div class="rain-start-overlay" id="rainStartOverlay">
+              <h3>🧧 财神红包雨</h3>
+              <p>15 秒内疯狂点击红包和元宝，躲避炸弹！</p>
+              <span class="shake-free-count" id="rainFreeCount">今日免费: 3/3</span>
+              <button class="btn btn-primary btn-lg" id="rainStartBtn" style="margin-top:1rem;">🧧 开始接红包</button>
+            </div>
+            <div class="rain-end-overlay" id="rainEndOverlay">
+              <div style="font-size:2rem; margin-bottom:0.5rem;">🎉</div>
+              <div class="rain-end-label">最终得分</div>
+              <div class="rain-end-score" id="rainEndScore">0</div>
+              <button class="btn btn-primary" id="rainReplayBtn" style="margin-top:1.5rem;">🧧 再来一次</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== 聚宝盆转盘 ==================== -->
+      <div class="welfare-panel" id="panelSpin">
+        <div class="spin-layout">
+          <div class="spin-stage">
+            <div class="spin-pointer">📍</div>
+            <canvas class="spin-wheel" id="spinWheelCanvas"></canvas>
+            <button class="spin-center-btn" id="spinBtn">抽奖</button>
+          </div>
+          <div class="spin-result-msg" id="spinResultMsg">点击中间按钮开始抽奖</div>
+          <div class="spin-free-count" id="spinFreeCount">今日免费: 1/1</div>
+          <div class="spin-prizes">
+            <div class="spin-prize-item"><span class="prize-icon">💰</span>888 MONEYGOD</div>
+            <div class="spin-prize-item"><span class="prize-icon">🪙</span>168 MONEYGOD</div>
+            <div class="spin-prize-item"><span class="prize-icon">🧧</span>88 MONEYGOD</div>
+            <div class="spin-prize-item"><span class="prize-icon">✨</span>38 MONEYGOD</div>
+            <div class="spin-prize-item"><span class="prize-icon">🔥</span>18 MONEYGOD</div>
+            <div class="spin-prize-item"><span class="prize-icon">🧩</span>NFT 碎片</div>
+            <div class="spin-prize-item"><span class="prize-icon">🃏</span>双倍卡</div>
+            <div class="spin-prize-item"><span class="prize-icon">😅</span>谢谢参与</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 签到粒子动画 -->
+    <div class="checkin-anim" id="checkinAnim"></div>
+  </section>
+
+  <!-- ===== 敬献香火 (Staking) ===== -->
+  <section class="section staking-section" id="staking">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Staking & Yield</span>
+        <h2 class="section-title" data-i18n="staking.title">🔥 财富神殿</h2>
+        <p class="section-desc" data-i18n="staking.desc">质押 LP Token 至长明灯池，持续"燃烧"赚取 $MONEYGOD 福报</p>
+      </div>
+      <div class="staking-grid">
+        <!-- 头香 -->
+        <div class="staking-card featured">
+          <div class="card-ribbon">限量</div>
+          <div class="card-icon">🕯️</div>
+          <h3 class="card-title">上头香</h3>
+          <p class="card-desc">首次质押即可获得限量版"头香"纪念 NFT，享受永久 VIP 特权</p>
+          <div class="card-stats">
+            <div class="card-stat">
+              <span class="card-stat-value">888</span>
+              <span class="card-stat-label">剩余名额</span>
+            </div>
+            <div class="card-stat">
+              <span class="card-stat-value">1.5x</span>
+              <span class="card-stat-label">收益加成</span>
+            </div>
+          </div>
+          <div class="card-apy">
+            <span class="apy-label">预期年化</span>
+            <span class="apy-value">128%</span>
+          </div>
+          <button class="btn btn-primary btn-full" onclick="alert('请先连接钱包')">
+            🙏 敬上头香
+          </button>
+        </div>
+        <!-- 长明灯 -->
+        <div class="staking-card">
+          <div class="card-icon">🏮</div>
+          <h3 class="card-title" data-i18n="staking.lantern">长明灯</h3>
+          <p class="card-desc" data-i18n="staking.lanternDesc">质押 LP Token 至长明灯池，持续"燃烧"赚取 $MONEYGOD 福报</p>
+          <div class="card-stats">
+            <div class="card-stat">
+              <span class="card-stat-value">$3.2M</span>
+              <span class="card-stat-label">已锁仓</span>
+            </div>
+            <div class="card-stat">
+              <span class="card-stat-value">2,168</span>
+              <span class="card-stat-label">参与人数</span>
+            </div>
+          </div>
+          <div class="card-apy">
+            <span class="apy-label">预期年化</span>
+            <span class="apy-value">88%</span>
+          </div>
+          <button class="btn btn-gold btn-full" onclick="alert('请先连接钱包')">
+            💡 点亮长明灯
+          </button>
+        </div>
+        <!-- 功德箱 -->
+        <div class="staking-card">
+          <div class="card-icon">📦</div>
+          <h3 class="card-title" data-i18n="staking.meritBox">功德箱</h3>
+          <p class="card-desc" data-i18n="staking.meritBoxDesc">直接质押 USDT / BNB / $MONEYGOD 到功德箱，获取稳定利息收益</p>
+          <div class="card-stats">
+            <div class="card-stat">
+              <span class="card-stat-value">$5.8M</span>
+              <span class="card-stat-label">已锁仓</span>
+            </div>
+            <div class="card-stat">
+              <span class="card-stat-value">8,666</span>
+              <span class="card-stat-label">参与人数</span>
+            </div>
+          </div>
+          <div class="card-apy">
+            <span class="apy-label">预期年化</span>
+            <span class="apy-value">38%</span>
+          </div>
+          <button class="btn btn-gold btn-full" onclick="alert('请先连接钱包')">
+            🪙 投入功德箱
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 神兽试炼 (GameFi) ===== -->
+  <section class="section gamefi-section" id="gamefi">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GameFi Challenge</span>
+        <h2 class="section-title" data-i18n="gamefi.title">🐅 黑虎竞技场</h2>
+        <p class="section-desc" data-i18n="gamefi.desc">预测 BTC 未来 1 小时走势，押对即瓜分奖池</p>
+      </div>
+      <div class="gamefi-grid">
+        <!-- 黑虎下山 -->
+        <div class="gamefi-card prediction-card">
+          <div class="gamefi-card-header">
+            <span class="gamefi-badge live">🔴 进行中</span>
+            <span class="gamefi-type">预测市场</span>
+          </div>
+          <h3 class="gamefi-title">⬛ 黑虎下山</h3>
+          <p class="gamefi-desc">预测 BTC 未来 1 小时的走势，押对即可瓜分奖池</p>
+          <div class="prediction-game">
+            <div class="prediction-pool">
+              <span class="pool-label">当前奖池</span>
+              <span class="pool-value">12,888 MONEYGOD</span>
+            </div>
+            <div class="prediction-timer">
+              <span class="timer-label">倒计时</span>
+              <div class="timer-display" id="predictionTimer">
+                <span class="timer-num">00</span>:
+                <span class="timer-num">45</span>:
+                <span class="timer-num">30</span>
+              </div>
+            </div>
+            <div class="prediction-buttons">
+              <button class="btn btn-up" onclick="alert('请先连接钱包')">
+                📈 看涨 <span class="ratio">58%</span>
+              </button>
+              <button class="btn btn-down" onclick="alert('请先连接钱包')">
+                📉 看跌 <span class="ratio">42%</span>
+              </button>
+            </div>
+            <div class="prediction-info">
+              <span>参与人数: 1,288</span>
+              <span>最小投入: 10 MONEYGOD</span>
+            </div>
+          </div>
+        </div>
+        <!-- 寻宝航线 -->
+        <div class="gamefi-card treasure-card">
+          <div class="gamefi-card-header">
+            <span class="gamefi-badge upcoming">⏳ 即将开始</span>
+            <span class="gamefi-type">链上寻宝</span>
+          </div>
+          <h3 class="gamefi-title">👦 寻宝航线</h3>
+          <p class="gamefi-desc">与合作项目联动的链上寻宝活动，寻找隐藏在各处的"聚宝盆"碎片</p>
+          <div class="treasure-list">
+            <div class="treasure-item">
+              <div class="treasure-icon">🎁</div>
+              <div class="treasure-info">
+                <h4>MantaNetwork 联合红包</h4>
+                <p>奖池: 5,000 USDT + 50,000 MONEYGOD</p>
+                <span class="treasure-time">2026/03/15 ~ 2026/03/22</span>
+              </div>
+              <span class="treasure-status hot">🔥 热门</span>
+            </div>
+            <div class="treasure-item">
+              <div class="treasure-icon">🎁</div>
+              <div class="treasure-info">
+                <h4>GoPlus Security 安全试炼</h4>
+                <p>奖池: 2,000 USDT + 25,000 MONEYGOD</p>
+                <span class="treasure-time">2026/03/20 ~ 2026/03/27</span>
+              </div>
+              <span class="treasure-status">即将开始</span>
+            </div>
+            <div class="treasure-item">
+              <div class="treasure-icon">🏆</div>
+              <div class="treasure-info">
+                <h4>Chainlink 神谕之旅</h4>
+                <p>奖池: 3,000 USDT + 30,000 MONEYGOD</p>
+                <span class="treasure-time">2026/03/25 ~ 2026/04/01</span>
+              </div>
+              <span class="treasure-status">即将开始</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-outline btn-full">查看全部活动 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 财神宝库 (NFT) ===== -->
+  <section class="section nft-section" id="nft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NFT Collection</span>
+        <h2 class="section-title" data-i18n="nft.title">⚔️ 法器锻造坊</h2>
+        <p class="section-desc" data-i18n="nft.desc">收集赵公明的神兵法器与祈福圣物，解锁专属权益</p>
+      </div>
+      <div class="nft-tabs">
+        <button class="nft-tab active" data-tab="weapons" data-i18n="nft.weapons">⚔️ 法器锻造坊</button>
+        <button class="nft-tab" data-tab="blessings" data-i18n="nft.blessings">🙏 祈福系列</button>
+      </div>
+      <div class="nft-grid" id="nftGrid">
+        <!-- 法器 NFT 卡片 -->
+        <div class="nft-card legendary">
+          <div class="nft-rarity">传说</div>
+          <div class="nft-image">
+            <span class="nft-emoji">🔮</span>
+          </div>
+          <div class="nft-info">
+            <h4 class="nft-name">定海神珠</h4>
+            <p class="nft-effect">质押收益 +15%</p>
+            <div class="nft-footer">
+              <span class="nft-price">888 MONEYGOD</span>
+              <span class="nft-supply">限量 88 枚</span>
+            </div>
+          </div>
+        </div>
+        <div class="nft-card epic">
+          <div class="nft-rarity">史诗</div>
+          <div class="nft-image">
+            <span class="nft-emoji">⛓️</span>
+          </div>
+          <div class="nft-info">
+            <h4 class="nft-name">缚龙索</h4>
+            <p class="nft-effect">GameFi 奖励 +10%</p>
+            <div class="nft-footer">
+              <span class="nft-price">588 MONEYGOD</span>
+              <span class="nft-supply">限量 188 枚</span>
+            </div>
+          </div>
+        </div>
+        <div class="nft-card epic">
+          <div class="nft-rarity">史诗</div>
+          <div class="nft-image">
+            <span class="nft-emoji">🏏</span>
+          </div>
+          <div class="nft-info">
+            <h4 class="nft-name">如意金鞭</h4>
+            <p class="nft-effect">质押收益 +8%</p>
+            <div class="nft-footer">
+              <span class="nft-price">388 MONEYGOD</span>
+              <span class="nft-supply">限量 388 枚</span>
+            </div>
+          </div>
+        </div>
+        <div class="nft-card rare">
+          <div class="nft-rarity">稀有</div>
+          <div class="nft-image">
+            <span class="nft-emoji">🪙</span>
+          </div>
+          <div class="nft-info">
+            <h4 class="nft-name">聚宝盆</h4>
+            <p class="nft-effect">每日空投 +5%</p>
+            <div class="nft-footer">
+              <span class="nft-price">188 MONEYGOD</span>
+              <span class="nft-supply">限量 888 枚</span>
+            </div>
+          </div>
+        </div>
+        <div class="nft-card rare">
+          <div class="nft-rarity">稀有</div>
+          <div class="nft-image">
+            <span class="nft-emoji">📜</span>
+          </div>
+          <div class="nft-info">
+            <h4 class="nft-name">招财符</h4>
+            <p class="nft-effect">手续费减免 5%</p>
+            <div class="nft-footer">
+              <span class="nft-price">128 MONEYGOD</span>
+              <span class="nft-supply">限量 1888 枚</span>
+            </div>
+          </div>
+        </div>
+        <div class="nft-card common">
+          <div class="nft-rarity">普通</div>
+          <div class="nft-image">
+            <span class="nft-emoji">🪬</span>
+          </div>
+          <div class="nft-info">
+            <h4 class="nft-name">祈福牌</h4>
+            <p class="nft-effect">可自定义祝福语</p>
+            <div class="nft-footer">
+              <span class="nft-price">18 MONEYGOD</span>
+              <span class="nft-supply">不限量</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 代币经济 (Tokenomics) ===== -->
+  <section class="section tokenomics-section" id="tokenomics">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tokenomics</span>
+        <h2 class="section-title" data-i18n="token.title">💰 $MONEYGOD 代币经济</h2>
+        <p class="section-desc" data-i18n="token.desc">$MONEYGOD 是财神殿的治理代币，贯穿整个生态系统</p>
+      </div>
+      <div class="tokenomics-layout">
+        <div class="token-chart">
+          <div class="chart-ring">
+            <svg viewBox="0 0 200 200" class="donut-chart">
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#2a1a0a" stroke-width="30" />
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#d4a017" stroke-width="30"
+                stroke-dasharray="150.8 352.0" stroke-dashoffset="0" class="chart-segment seg1" />
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#c0392b" stroke-width="30"
+                stroke-dasharray="100.5 402.3" stroke-dashoffset="-150.8" class="chart-segment seg2" />
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#e67e22" stroke-width="30"
+                stroke-dasharray="75.4 427.4" stroke-dashoffset="-251.3" class="chart-segment seg3" />
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#8e44ad" stroke-width="30"
+                stroke-dasharray="50.3 452.5" stroke-dashoffset="-326.7" class="chart-segment seg4" />
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#27ae60" stroke-width="30"
+                stroke-dasharray="50.3 452.5" stroke-dashoffset="-377.0" class="chart-segment seg5" />
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#2980b9" stroke-width="30"
+                stroke-dasharray="75.4 427.4" stroke-dashoffset="-427.3" class="chart-segment seg6" />
+            </svg>
+            <div class="chart-center">
+              <span class="chart-total">1,000,000,000</span>
+              <span class="chart-label">总供应量</span>
+            </div>
+          </div>
+          <div class="chart-legend">
+            <div class="legend-item"><span class="legend-color" style="background:#d4a017"></span>流动性挖矿 30%</div>
+            <div class="legend-item"><span class="legend-color" style="background:#c0392b"></span>社区激励 20%</div>
+            <div class="legend-item"><span class="legend-color" style="background:#e67e22"></span>团队与顾问 15%</div>
+            <div class="legend-item"><span class="legend-color" style="background:#8e44ad"></span>生态发展 10%</div>
+            <div class="legend-item"><span class="legend-color" style="background:#27ae60"></span>市场营销 10%</div>
+            <div class="legend-item"><span class="legend-color" style="background:#2980b9"></span>储备金 15%</div>
+          </div>
+        </div>
+        <div class="token-details">
+          <div class="token-info-card">
+            <h3>代币信息</h3>
+            <div class="token-row">
+              <span>代币名称</span><span>MONEYGOD</span>
+            </div>
+            <div class="token-row">
+              <span>代币符号</span><span>$MONEYGOD</span>
+            </div>
+            <div class="token-row">
+              <span>总供应量</span><span>1,000,000,000</span>
+            </div>
+            <div class="token-row">
+              <span>网络</span><span>BNB Chain</span>
+            </div>
+            <div class="token-row">
+              <span>标准</span><span>BEP-20</span>
+            </div>
+          </div>
+          <div class="token-uses">
+            <h3>代币用途</h3>
+            <div class="use-item">
+              <span class="use-icon">🔥</span>
+              <div>
+                <h4>质押挖矿</h4>
+                <p>在各种香火池中质押获取收益</p>
+              </div>
+            </div>
+            <div class="use-item">
+              <span class="use-icon">🎮</span>
+              <div>
+                <h4>游戏参与</h4>
+                <p>黑虎竞技场的参与门票与奖励</p>
+              </div>
+            </div>
+            <div class="use-item">
+              <span class="use-icon">🎨</span>
+              <div>
+                <h4>NFT 铸造</h4>
+                <p>用于铸造法器与祈福牌 NFT</p>
+              </div>
+            </div>
+            <div class="use-item">
+              <span class="use-icon">🗳️</span>
+              <div>
+                <h4>治理投票</h4>
+                <p>持有者可参与平台重大决策投票</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary btn-full">
+            🛒 购买 $MONEYGOD (PancakeSwap)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 市场行情 ===== -->
+  <section class="section market-section" id="market">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Market Overview</span>
+        <h2 class="section-title" data-i18n="market.title">📊 市场行情</h2>
+        <p class="section-desc" data-i18n="market.desc">实时追踪加密货币行情，财神助您洞察先机</p>
+      </div>
+      <div class="market-table-wrapper">
+        <table class="market-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th data-i18n="market.coin">币种</th>
+              <th data-i18n="market.price">价格</th>
+              <th data-i18n="market.24h">24h 涨跌</th>
+              <th data-i18n="market.7d">7d 涨跌</th>
+              <th data-i18n="market.mcap">市值</th>
+              <th data-i18n="market.fortune">财运</th>
+            </tr>
+          </thead>
+          <tbody id="marketTableBody">
+            <tr>
+              <td>1</td>
+              <td><span class="coin-name">🪙 Bitcoin <small>BTC</small></span></td>
+              <td>$69,214</td>
+              <td class="up">+0.34%</td>
+              <td class="up">+4.68%</td>
+              <td>$1.4T</td>
+              <td><span class="fortune-badge good">大吉</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><span class="coin-name">💎 Ethereum <small>ETH</small></span></td>
+              <td>$2,017</td>
+              <td class="up">+0.22%</td>
+              <td class="up">+3.72%</td>
+              <td>$243.5B</td>
+              <td><span class="fortune-badge good">吉</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><span class="coin-name">🔶 BNB <small>BNB</small></span></td>
+              <td>$638.57</td>
+              <td class="up">+0.09%</td>
+              <td class="up">+3.83%</td>
+              <td>$87.1B</td>
+              <td><span class="fortune-badge good">吉</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><span class="coin-name">⚡ Solana <small>SOL</small></span></td>
+              <td>$85.64</td>
+              <td class="up">+0.32%</td>
+              <td class="up">+4.59%</td>
+              <td>$48.9B</td>
+              <td><span class="fortune-badge mid">中吉</span></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><span class="coin-name">🐕 Dogecoin <small>DOGE</small></span></td>
+              <td>$0.0909</td>
+              <td class="down">-0.11%</td>
+              <td class="up">+1.84%</td>
+              <td>$13.9B</td>
+              <td><span class="fortune-badge mid">小吉</span></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><span class="coin-name">🏮 MONEYGOD <small>MONEYGOD</small></span></td>
+              <td>$0.0888</td>
+              <td class="up">+8.88%</td>
+              <td class="up">+28.88%</td>
+              <td>$88.8M</td>
+              <td><span class="fortune-badge great">鸿运当头</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 合作伙伴 ===== -->
+  <section class="section partners-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Partners</span>
+        <h2 class="section-title" data-i18n="partners.title">🤝 合作伙伴</h2>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-item">BNB Chain</div>
+        <div class="partner-item">PancakeSwap</div>
+        <div class="partner-item">Chainlink</div>
+        <div class="partner-item">GoPlus Security</div>
+        <div class="partner-item">Manta Network</div>
+        <div class="partner-item">CertiK</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 data-i18n="cta.title">🏮 登上财富岛，开启 Web3 财运之旅</h2>
+        <p data-i18n="cta.desc">连接钱包，成为财富岛的第一批岛民，共享链上财富盛宴</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary btn-lg" onclick="alert('请先连接钱包')" data-i18n="cta.enter">🔥 立即进入</button>
+          <a href="#" class="btn btn-outline btn-lg" data-i18n="cta.whitepaper">📄 阅读白皮书</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-icon">🏮</span>
+          <span class="logo-text" data-i18n="nav.logo">财富岛</span>
+        <span class="logo-sub">Fortune Island</span>
+          <p data-i18n="footer.brand">以赵公明正财神为核心 IP 的<br />去中心化金融与文化平台</p>
+          <div class="footer-socials">
+            <a href="#" title="Twitter">𝕏</a>
+            <a href="#" title="Telegram">✈️</a>
+            <a href="#" title="Discord">💬</a>
+            <a href="#" title="YouTube">▶️</a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.products">产品</h4>
+          <a href="#staking" data-i18n="footer.stakingLink">财富神殿</a>
+          <a href="#gamefi" data-i18n="footer.gamefiLink">黑虎竞技场</a>
+          <a href="#nft" data-i18n="footer.nftLink">法器锻造坊</a>
+          <a href="#market" data-i18n="footer.marketLink">市场行情</a>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.resources">资源</h4>
+          <a href="#" data-i18n="footer.whitepaper">白皮书</a>
+          <a href="#" data-i18n="footer.audit">智能合约审计</a>
+          <a href="#" data-i18n="footer.docs">开发者文档</a>
+          <a href="#" data-i18n="footer.brand2">品牌资源</a>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.communityTitle">社区</h4>
+          <a href="#">Twitter / X</a>
+          <a href="#">Telegram</a>
+          <a href="#">Discord</a>
+          <a href="#">Medium</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 财神殿 Fortune Island. All rights reserved.</p>
+        <p data-i18n="footer.powered">Powered by BNB Chain | Smart Contract Audited by CertiK</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=2"></script>
+  <script src="js/welfare.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>

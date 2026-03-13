@@ -1,0 +1,715 @@
+/* ===== 福利中心 Section ===== */
+.welfare-section {
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(231,76,60,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 70%, rgba(212,160,23,0.06) 0%, transparent 60%),
+    var(--bg-primary);
+}
+
+.welfare-section .section-tag {
+  background: linear-gradient(135deg, #e74c3c, #d4a017);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* ---- Tab Navigation ---- */
+.welfare-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.welfare-tab {
+  padding: 0.7rem 1.6rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,160,23,0.15);
+  border-radius: 30px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-sans);
+}
+
+.welfare-tab:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.welfare-tab.active {
+  background: linear-gradient(135deg, rgba(212,160,23,0.2), rgba(192,57,43,0.15));
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ---- Panels ---- */
+.welfare-panel {
+  display: none;
+}
+
+.welfare-panel.active {
+  display: block;
+  animation: welfareFadeIn 0.4s ease;
+}
+
+@keyframes welfareFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   签到 - Check In
+   =========================== */
+.checkin-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+}
+
+.checkin-main {
+  background: rgba(26,16,10,0.85);
+  border: 1px solid rgba(212,160,23,0.15);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.checkin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkin-header h3 {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  font-size: 1.3rem;
+}
+
+.checkin-streak {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, rgba(212,160,23,0.15), rgba(192,57,43,0.1));
+  border: 1px solid rgba(212,160,23,0.3);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.checkin-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.cal-header {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 4px 0;
+  font-weight: 600;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  cursor: default;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.cal-day.today {
+  border-color: var(--gold);
+  color: #fff;
+  cursor: pointer;
+  background: rgba(212,160,23,0.08);
+}
+
+.cal-day.today:hover {
+  background: rgba(212,160,23,0.15);
+  transform: scale(1.08);
+}
+
+.cal-day.checked {
+  background: linear-gradient(135deg, rgba(212,160,23,0.2), rgba(192,57,43,0.15));
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.cal-day.checked::after {
+  content: '🔥';
+  font-size: 1rem;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.cal-day.future {
+  opacity: 0.3;
+}
+
+.cal-day .day-num {
+  font-weight: 600;
+  line-height: 1;
+}
+
+.cal-day .day-reward {
+  font-size: 0.55rem;
+  color: rgba(212,160,23,0.7);
+  margin-top: 2px;
+}
+
+.checkin-btn {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.9rem;
+}
+
+.checkin-btn.done {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #333;
+  border-color: #333;
+}
+
+/* Sidebar */
+.checkin-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkin-stat-card {
+  background: rgba(26,16,10,0.85);
+  border: 1px solid rgba(212,160,23,0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.checkin-stat-card h4 {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.checkin-stat-value {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.checkin-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+/* Milestone rewards */
+.checkin-milestones {
+  background: rgba(26,16,10,0.85);
+  border: 1px solid rgba(212,160,23,0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.checkin-milestones h4 {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.8rem;
+}
+
+.milestone-item:last-child { border-bottom: none; }
+
+.milestone-day {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(212,160,23,0.1);
+  border: 1px solid rgba(212,160,23,0.2);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.milestone-day.reached {
+  background: var(--gold);
+  color: #000;
+}
+
+.milestone-info {
+  flex: 1;
+}
+
+.milestone-info strong {
+  display: block;
+  color: #eee;
+  font-size: 0.8rem;
+}
+
+.milestone-info span {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+/* ===========================
+   摇签筒
+   =========================== */
+.shake-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.shake-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26,16,10,0.85);
+  border: 1px solid rgba(212,160,23,0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  min-height: 420px;
+}
+
+.shake-tube {
+  width: 120px;
+  height: 200px;
+  background: linear-gradient(180deg, #8B4513, #A0522D, #8B4513);
+  border-radius: 12px 12px 20px 20px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.1s;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5), inset 0 -4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.shake-tube::before {
+  content: '签';
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(212,160,23,0.4);
+  margin-top: 60px;
+}
+
+.shake-tube.shaking {
+  animation: shakeTube 0.15s infinite alternate;
+}
+
+@keyframes shakeTube {
+  0% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+.shake-sticks {
+  position: absolute;
+  top: -20px;
+  display: flex;
+  gap: 3px;
+}
+
+.shake-stick {
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(180deg, #daa520, #b8860b);
+  border-radius: 2px;
+  transform-origin: bottom;
+}
+
+.shake-hint {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.shake-free-count {
+  font-size: 0.8rem;
+  color: rgba(212,160,23,0.7);
+}
+
+/* Shake result */
+.shake-result-area {
+  background: rgba(26,16,10,0.85);
+  border: 1px solid rgba(212,160,23,0.15);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+
+.shake-result-empty {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.shake-result-empty .empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.shake-result-card {
+  display: none;
+  text-align: center;
+  width: 100%;
+  animation: welfareFadeIn 0.5s ease;
+}
+
+.shake-result-card.show { display: block; }
+
+.result-grade {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.result-grade.grade-ss { color: #FFD700; text-shadow: 0 0 20px rgba(255,215,0,0.5); }
+.result-grade.grade-s  { color: #FFA500; }
+.result-grade.grade-a  { color: #87CEEB; }
+.result-grade.grade-b  { color: #aaa; }
+.result-grade.grade-c  { color: #888; }
+
+.result-poem {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 2;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: rgba(212,160,23,0.05);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  text-align: left;
+}
+
+.result-reward {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.result-reward-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   红包雨
+   =========================== */
+.rain-layout {
+  text-align: center;
+}
+
+.rain-arena {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 480px;
+  margin: 0 auto 1.5rem;
+  background: rgba(26,16,10,0.85);
+  border: 1px solid rgba(212,160,23,0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.rain-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.rain-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.rain-hud-item {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(212,160,23,0.3);
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.rain-hud-item span {
+  color: var(--gold);
+}
+
+.rain-start-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,6,5,0.85);
+  z-index: 10;
+  transition: opacity 0.3s;
+}
+
+.rain-start-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rain-start-overlay h3 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.rain-start-overlay p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.rain-end-overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,6,5,0.9);
+  z-index: 10;
+}
+
+.rain-end-overlay.show {
+  display: flex;
+  animation: welfareFadeIn 0.4s ease;
+}
+
+.rain-end-score {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.rain-end-label {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.rain-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rain-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.rain-info-item span {
+  font-size: 1.2rem;
+}
+
+/* ===========================
+   聚宝盆转盘
+   =========================== */
+.spin-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spin-stage {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.spin-wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 40px rgba(212,160,23,0.3), inset 0 0 30px rgba(0,0,0,0.3);
+  transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+}
+
+.spin-pointer {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  z-index: 5;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+}
+
+.spin-center-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4a017, #f0d060);
+  border: 3px solid #b8860b;
+  color: #000;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(212,160,23,0.4);
+}
+
+.spin-center-btn:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 6px 25px rgba(212,160,23,0.6);
+}
+
+.spin-center-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spin-result-msg {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--gold);
+  min-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.spin-free-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.spin-prizes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.spin-prize-item {
+  background: rgba(26,16,10,0.85);
+  border: 1px solid rgba(212,160,23,0.1);
+  border-radius: 10px;
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.spin-prize-item .prize-icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* ---- 签到动画 ---- */
+.checkin-anim {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  display: none;
+}
+
+.checkin-anim.show { display: block; }
+
+.incense-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: incenseRise 1.5s ease-out forwards;
+}
+
+@keyframes incenseRise {
+  0%   { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-200px) scale(0); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 992px) {
+  .checkin-layout { grid-template-columns: 1fr; }
+  .shake-layout  { grid-template-columns: 1fr; }
+  .spin-stage { width: 320px; height: 320px; }
+  .spin-center-btn { width: 65px; height: 65px; font-size: 0.8rem; }
+}
+
+@media (max-width: 600px) {
+  .welfare-tabs { gap: 0.3rem; }
+  .welfare-tab { padding: 0.5rem 1rem; font-size: 0.8rem; }
+  .checkin-calendar { gap: 4px; }
+  .cal-day { font-size: 0.7rem; }
+  .spin-stage { width: 280px; height: 280px; }
+  .spin-prizes { grid-template-columns: repeat(2, 1fr); }
+  .rain-arena { height: 380px; }
+}

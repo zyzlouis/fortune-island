@@ -1,0 +1,196 @@
+/* ===== 财神宝库 (NFT) ===== */
+.nft-section {
+  background: var(--bg-primary);
+}
+
+/* NFT 标签页 */
+.nft-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.nft-tab {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nft-tab:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-hover);
+}
+
+.nft-tab.active {
+  color: #1a0f00;
+  background: var(--gradient-gold);
+  border-color: transparent;
+}
+
+/* NFT 网格 */
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.nft-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.nft-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.nft-rarity {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.nft-card.legendary .nft-rarity {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.3), rgba(240, 208, 96, 0.3));
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 160, 23, 0.4);
+  box-shadow: 0 0 12px rgba(212, 160, 23, 0.2);
+}
+
+.nft-card.epic .nft-rarity {
+  background: rgba(142, 68, 173, 0.25);
+  color: #bb8fce;
+  border: 1px solid rgba(142, 68, 173, 0.4);
+}
+
+.nft-card.rare .nft-rarity {
+  background: rgba(41, 128, 185, 0.25);
+  color: #85c1e9;
+  border: 1px solid rgba(41, 128, 185, 0.4);
+}
+
+.nft-card.common .nft-rarity {
+  background: rgba(127, 140, 141, 0.2);
+  color: #95a5a6;
+  border: 1px solid rgba(127, 140, 141, 0.3);
+}
+
+/* NFT 卡片图像区 */
+.nft-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nft-card.legendary .nft-image {
+  background:
+    radial-gradient(circle, rgba(212, 160, 23, 0.12) 0%, transparent 70%),
+    linear-gradient(135deg, #1a100a, #2a1a0e);
+}
+
+.nft-card.epic .nft-image {
+  background:
+    radial-gradient(circle, rgba(142, 68, 173, 0.1) 0%, transparent 70%),
+    linear-gradient(135deg, #1a0e1f, #2a1a30);
+}
+
+.nft-card.rare .nft-image {
+  background:
+    radial-gradient(circle, rgba(41, 128, 185, 0.1) 0%, transparent 70%),
+    linear-gradient(135deg, #0e1a1f, #1a2a30);
+}
+
+.nft-card.common .nft-image {
+  background:
+    radial-gradient(circle, rgba(127, 140, 141, 0.08) 0%, transparent 70%),
+    linear-gradient(135deg, #151515, #1e1e1e);
+}
+
+.nft-emoji {
+  font-size: 4.5rem;
+  filter: drop-shadow(0 0 20px rgba(212, 160, 23, 0.2));
+  transition: transform 0.4s;
+}
+
+.nft-card:hover .nft-emoji {
+  transform: scale(1.12) rotate(-3deg);
+}
+
+/* NFT 卡片信息 */
+.nft-info {
+  padding: 20px;
+}
+
+.nft-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.nft-effect {
+  font-size: 0.82rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.nft-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.nft-price {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.nft-supply {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* 传说卡片特殊边框 */
+.nft-card.legendary {
+  border-color: rgba(212, 160, 23, 0.25);
+}
+
+.nft-card.legendary:hover {
+  border-color: rgba(212, 160, 23, 0.5);
+  box-shadow: 0 8px 40px rgba(212, 160, 23, 0.2);
+}
+
+.nft-card.epic {
+  border-color: rgba(142, 68, 173, 0.2);
+}
+
+.nft-card.epic:hover {
+  border-color: rgba(142, 68, 173, 0.4);
+  box-shadow: 0 8px 40px rgba(142, 68, 173, 0.15);
+}
